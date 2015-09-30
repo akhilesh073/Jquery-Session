@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+article {
+    width: 600px;
+    margin: auto;
+}
+
+blockquote.co {
+    float: right;
+    background: #e3e3e3;
+    font-size: 2em;
+    width: 40%;
+    text-align: center;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery insert</title>
+</head>
+
+<body>
+    <article>
+        <h1>Test blog</h1>
+        <hr>
+        <p>This is a test page to test jquery insert methld</p>
+        <p>This includes multiple insert methods and techniques to add in the dom</p>
+        <p>This includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the dom This includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the dom<span class=co>This is a test page to test jquery insert methld</span> to test block quotes</p>
+        <p>This includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the dom This includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the domThis includes multiple insert methods and techniques to add in the dom<span class=co>Hello from jquery</span> to test block quotes</p>
+        <script src="jquery.js"></script>
+        <script>
+        var co = $('span.co').each(function() {
+            var $this = $(this);
+            $('<blockquote></blockquote>', {
+                class: 'co',
+                text: $this.text()
+            }).prependTo($this.closest('p'));
+        });
+        /*$('h1').after(function(){
+        	return $(this).next();
+        });*/
+        /*$('article').prepend('Hi this from jquery');
+        $('h1').before('This came from after tag');
+        $('p').first().after('Some test after p tag');
+        $('<h2>this is a second header</h2>').appendTo('article');
+        $('<h2></h2>',{
+        	text: 'This is from header object',
+        	class: 'TestClass'
+        }
+        	).appendTo('article');
+        $('<h2></h2>',{
+        	text: 'This is from header object using insertAfter',
+        	class: 'TestClass'
+        }
+        	).insertAfter('p:first()');
+
+        $('<h2></h2>',{
+        	text: 'This is from header object using InsertBefore',
+        	class: 'TestClass'
+        }
+        	).insertBefore('p:nth-child(3)');*/
+        </script>
+</body>
+
+</html>
